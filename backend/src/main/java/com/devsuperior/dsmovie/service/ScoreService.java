@@ -51,11 +51,11 @@ public class ScoreService {
 			sum = sum + s.getValue();
 		}
 		
-		int qntd = movie.getScores().size();
-		double avg = sum / qntd;
+		//int qntd = movie.getScores().size();
+		double avg = sum / movie.getScores().size();
 		
 		movie.setScore(avg);
-		movie.setCount(qntd);
+		movie.setCount(movie.getScores().size());
 		
 		movie = movieRepository.save(movie);
 		
