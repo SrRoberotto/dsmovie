@@ -24,7 +24,7 @@ function Listing() {
     //useEffect escuta por alterações no componente da lista
     // e executa a função em caso de alteração
     useEffect(()=>{
-        axios.get (`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`)
+        axios.get (`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)
         .then(response => {
             const data = response.data as MoviePage;
             // console.log(data);
